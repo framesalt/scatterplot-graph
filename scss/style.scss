@@ -1,0 +1,83 @@
+$colorForBackForSvg: #337ab3;
+
+@mixin centerAbsolute(){
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxing {
+  position: absolute;
+  @include centerAbsolute();
+  width: 600px;
+  height: 600px;
+  
+}
+
+html {
+  
+  background: url(http://bike-oisans.com/wp-content/uploads/2015/07/plan-alpe-d-huez.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  
+  width: 100%;
+  height: 100%;
+  
+  
+  .backForSvg {
+  
+  border-radius: 10px;
+  opacity: 0.6;
+  background-color: $colorForBackForSvg;
+  
+  @extend .boxing;
+    height: 550px;
+  
+}
+  
+  svg {
+    @extend .boxing;
+  }
+  
+  #customTip {
+    display: none;
+    text-align: center;
+    position: absolute;
+    @include centerAbsolute();
+    
+    padding: 5px;
+    
+    margin-top: 5px;
+    opacity: 0.9;
+    background-color: $colorForBackForSvg;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+    color: white;
+  }
+  
+}
+
+text {
+  fill: #EEF0EF;
+  font-weight: bold;
+}
+
+circle {
+  stroke: white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
